@@ -1,0 +1,732 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/sheepsteak/react-shallow-testutils#readme"
+
+    >react-shallow-testutils (v2.0.0)</a>
+</h1>
+<h4>Replacement for TestUtils when using React's shallow rendering</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-shallow-testutils">module react-shallow-testutils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-shallow-testutils.findAll">
+            function <span class="apidocSignatureSpan">react-shallow-testutils.</span>findAll
+            <span class="apidocSignatureSpan">(tree, test)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-shallow-testutils.findAllWithClass">
+            function <span class="apidocSignatureSpan">react-shallow-testutils.</span>findAllWithClass
+            <span class="apidocSignatureSpan">(tree, className)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-shallow-testutils.findAllWithType">
+            function <span class="apidocSignatureSpan">react-shallow-testutils.</span>findAllWithType
+            <span class="apidocSignatureSpan">(tree, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-shallow-testutils.findWithClass">
+            function <span class="apidocSignatureSpan">react-shallow-testutils.</span>findWithClass
+            <span class="apidocSignatureSpan">(root, className)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-shallow-testutils.findWithRef">
+            function <span class="apidocSignatureSpan">react-shallow-testutils.</span>findWithRef
+            <span class="apidocSignatureSpan">(tree, ref)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-shallow-testutils.findWithType">
+            function <span class="apidocSignatureSpan">react-shallow-testutils.</span>findWithType
+            <span class="apidocSignatureSpan">(root, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-shallow-testutils.isComponentOfType">
+            function <span class="apidocSignatureSpan">react-shallow-testutils.</span>isComponentOfType
+            <span class="apidocSignatureSpan">(element, componentType)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-shallow-testutils.isDOMComponent">
+            function <span class="apidocSignatureSpan">react-shallow-testutils.</span>isDOMComponent
+            <span class="apidocSignatureSpan">(element)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-shallow-testutils.</span>find_all</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-shallow-testutils.</span>find_all_with_class</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-shallow-testutils.</span>find_all_with_type</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-shallow-testutils.</span>find_with_class</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-shallow-testutils.</span>find_with_ref</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-shallow-testutils.</span>find_with_type</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-shallow-testutils.</span>is_component_of_type</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-shallow-testutils.</span>is_dom_component</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-shallow-testutils.find_all">module react-shallow-testutils.find_all</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-shallow-testutils.find_all.default">
+            function <span class="apidocSignatureSpan">react-shallow-testutils.find_all.</span>default
+            <span class="apidocSignatureSpan">(tree, test)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-shallow-testutils.find_all_with_class">module react-shallow-testutils.find_all_with_class</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-shallow-testutils.find_all_with_class.default">
+            function <span class="apidocSignatureSpan">react-shallow-testutils.find_all_with_class.</span>default
+            <span class="apidocSignatureSpan">(tree, className)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-shallow-testutils.find_all_with_type">module react-shallow-testutils.find_all_with_type</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-shallow-testutils.find_all_with_type.default">
+            function <span class="apidocSignatureSpan">react-shallow-testutils.find_all_with_type.</span>default
+            <span class="apidocSignatureSpan">(tree, type)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-shallow-testutils.find_with_class">module react-shallow-testutils.find_with_class</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-shallow-testutils.find_with_class.default">
+            function <span class="apidocSignatureSpan">react-shallow-testutils.find_with_class.</span>default
+            <span class="apidocSignatureSpan">(root, className)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-shallow-testutils.find_with_ref">module react-shallow-testutils.find_with_ref</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-shallow-testutils.find_with_ref.default">
+            function <span class="apidocSignatureSpan">react-shallow-testutils.find_with_ref.</span>default
+            <span class="apidocSignatureSpan">(tree, ref)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-shallow-testutils.find_with_type">module react-shallow-testutils.find_with_type</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-shallow-testutils.find_with_type.default">
+            function <span class="apidocSignatureSpan">react-shallow-testutils.find_with_type.</span>default
+            <span class="apidocSignatureSpan">(root, type)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-shallow-testutils.is_component_of_type">module react-shallow-testutils.is_component_of_type</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-shallow-testutils.is_component_of_type.default">
+            function <span class="apidocSignatureSpan">react-shallow-testutils.is_component_of_type.</span>default
+            <span class="apidocSignatureSpan">(element, componentType)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-shallow-testutils.is_dom_component">module react-shallow-testutils.is_dom_component</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-shallow-testutils.is_dom_component.default">
+            function <span class="apidocSignatureSpan">react-shallow-testutils.is_dom_component.</span>default
+            <span class="apidocSignatureSpan">(element)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-shallow-testutils" id="apidoc.module.react-shallow-testutils">module react-shallow-testutils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-shallow-testutils.findAll" id="apidoc.element.react-shallow-testutils.findAll">
+        function <span class="apidocSignatureSpan">react-shallow-testutils.</span>findAll
+        <span class="apidocSignatureSpan">(tree, test)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findAll(tree, test) {
+  var found = test(tree) ? [tree] : [];
+
+  if (_react2.default.isValidElement(tree)) {
+    if (_react2.default.Children.count(tree.props.children) &#x3e; 0) {
+      _react2.default.Children.forEach(tree.props.children, function (child) {
+        found = found.concat(findAll(child, test));
+      });
+    }
+  }
+
+  return found;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-shallow-testutils.findAllWithClass" id="apidoc.element.react-shallow-testutils.findAllWithClass">
+        function <span class="apidocSignatureSpan">react-shallow-testutils.</span>findAllWithClass
+        <span class="apidocSignatureSpan">(tree, className)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findAllWithClass(tree, className) {
+  return (0, _findAll2.default)(tree, function (component) {
+    if (_react2.default.isValidElement(component)) {
+      if (component.props.className != null) {
+
+        if (className.indexOf(&#x27;.&#x27;) !== -1) {
+          var classNameList = className.split(&#x27;.&#x27;);
+
+          return classNameList.every(function (val) {
+            return hasClassName(component.props.className, val);
+          });
+        }
+
+        return hasClassName(component.props.className, className);
+      }
+
+      return false;
+    }
+
+    return false;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-shallow-testutils.findAllWithType" id="apidoc.element.react-shallow-testutils.findAllWithType">
+        function <span class="apidocSignatureSpan">react-shallow-testutils.</span>findAllWithType
+        <span class="apidocSignatureSpan">(tree, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findAllWithType(tree, type) {
+  return (0, _findAll2.default)(tree, function (component) {
+    if (_react2.default.isValidElement(component)) {
+      return component.type != null &#x26;&#x26; component.type === type;
+    }
+
+    return false;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-shallow-testutils.findWithClass" id="apidoc.element.react-shallow-testutils.findWithClass">
+        function <span class="apidocSignatureSpan">react-shallow-testutils.</span>findWithClass
+        <span class="apidocSignatureSpan">(root, className)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findWithClass(root, className) {
+  var found = (0, _findAllWithClass2.default)(root, className);
+
+  if (found.length !== 1) {
+    throw new Error(&#x27;Did not find exactly one match for class: &#x27; + className);
+  }
+
+  return found[0];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-shallow-testutils.findWithRef" id="apidoc.element.react-shallow-testutils.findWithRef">
+        function <span class="apidocSignatureSpan">react-shallow-testutils.</span>findWithRef
+        <span class="apidocSignatureSpan">(tree, ref)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findWithRef(tree, ref) {
+  var found = (0, _findAll2.default)(tree, function (component) {
+    if (_react2.default.isValidElement(component)) {
+      return component.ref != null &#x26;&#x26; component.ref === ref;
+    }
+
+    return false;
+  });
+
+  if (found.length !== 1) {
+    throw new Error(&#x27;Did not find exactly one match for ref: &#x27; + ref);
+  }
+
+  return found[0];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-shallow-testutils.findWithType" id="apidoc.element.react-shallow-testutils.findWithType">
+        function <span class="apidocSignatureSpan">react-shallow-testutils.</span>findWithType
+        <span class="apidocSignatureSpan">(root, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findWithType(root, type) {
+  var found = (0, _findAllWithType2.default)(root, type);
+
+  if (found.length !== 1) {
+    throw new Error(&#x27;Did not find exactly one match for type: &#x27; + type);
+  }
+
+  return found[0];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+However, if you want everything then you can do this:
+
+```javascript
+import * as ShallowTestUtils from &#x27;react-shallow-testutils&#x27;;
+
+ShallowTestUtils.<span class="apidocCodeKeywordSpan">findWithType</span>(tree, …);
+```
+
+### isComponentOfType
+Returns whether a `ReactElement` is of a particular type.
+
+```javascript
+boolean isComponentOfType(ReactElement element, function componentClass | string tagName)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-shallow-testutils.isComponentOfType" id="apidoc.element.react-shallow-testutils.isComponentOfType">
+        function <span class="apidocSignatureSpan">react-shallow-testutils.</span>isComponentOfType
+        <span class="apidocSignatureSpan">(element, componentType)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isComponentOfType(element, componentType) {
+  return element.type === componentType;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-shallow-testutils.isDOMComponent" id="apidoc.element.react-shallow-testutils.isDOMComponent">
+        function <span class="apidocSignatureSpan">react-shallow-testutils.</span>isDOMComponent
+        <span class="apidocSignatureSpan">(element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isDOMComponent(element) {
+  return typeof element.type === &#x27;string&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-shallow-testutils.find_all" id="apidoc.module.react-shallow-testutils.find_all">module react-shallow-testutils.find_all</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-shallow-testutils.find_all.default" id="apidoc.element.react-shallow-testutils.find_all.default">
+        function <span class="apidocSignatureSpan">react-shallow-testutils.find_all.</span>default
+        <span class="apidocSignatureSpan">(tree, test)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findAll(tree, test) {
+  var found = test(tree) ? [tree] : [];
+
+  if (_react2.default.isValidElement(tree)) {
+    if (_react2.default.Children.count(tree.props.children) &#x3e; 0) {
+      _react2.default.Children.forEach(tree.props.children, function (child) {
+        found = found.concat(findAll(child, test));
+      });
+    }
+  }
+
+  return found;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-shallow-testutils.find_all_with_class" id="apidoc.module.react-shallow-testutils.find_all_with_class">module react-shallow-testutils.find_all_with_class</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-shallow-testutils.find_all_with_class.default" id="apidoc.element.react-shallow-testutils.find_all_with_class.default">
+        function <span class="apidocSignatureSpan">react-shallow-testutils.find_all_with_class.</span>default
+        <span class="apidocSignatureSpan">(tree, className)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findAllWithClass(tree, className) {
+  return (0, _findAll2.default)(tree, function (component) {
+    if (_react2.default.isValidElement(component)) {
+      if (component.props.className != null) {
+
+        if (className.indexOf(&#x27;.&#x27;) !== -1) {
+          var classNameList = className.split(&#x27;.&#x27;);
+
+          return classNameList.every(function (val) {
+            return hasClassName(component.props.className, val);
+          });
+        }
+
+        return hasClassName(component.props.className, className);
+      }
+
+      return false;
+    }
+
+    return false;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-shallow-testutils.find_all_with_type" id="apidoc.module.react-shallow-testutils.find_all_with_type">module react-shallow-testutils.find_all_with_type</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-shallow-testutils.find_all_with_type.default" id="apidoc.element.react-shallow-testutils.find_all_with_type.default">
+        function <span class="apidocSignatureSpan">react-shallow-testutils.find_all_with_type.</span>default
+        <span class="apidocSignatureSpan">(tree, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findAllWithType(tree, type) {
+  return (0, _findAll2.default)(tree, function (component) {
+    if (_react2.default.isValidElement(component)) {
+      return component.type != null &#x26;&#x26; component.type === type;
+    }
+
+    return false;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-shallow-testutils.find_with_class" id="apidoc.module.react-shallow-testutils.find_with_class">module react-shallow-testutils.find_with_class</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-shallow-testutils.find_with_class.default" id="apidoc.element.react-shallow-testutils.find_with_class.default">
+        function <span class="apidocSignatureSpan">react-shallow-testutils.find_with_class.</span>default
+        <span class="apidocSignatureSpan">(root, className)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findWithClass(root, className) {
+  var found = (0, _findAllWithClass2.default)(root, className);
+
+  if (found.length !== 1) {
+    throw new Error(&#x27;Did not find exactly one match for class: &#x27; + className);
+  }
+
+  return found[0];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-shallow-testutils.find_with_ref" id="apidoc.module.react-shallow-testutils.find_with_ref">module react-shallow-testutils.find_with_ref</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-shallow-testutils.find_with_ref.default" id="apidoc.element.react-shallow-testutils.find_with_ref.default">
+        function <span class="apidocSignatureSpan">react-shallow-testutils.find_with_ref.</span>default
+        <span class="apidocSignatureSpan">(tree, ref)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findWithRef(tree, ref) {
+  var found = (0, _findAll2.default)(tree, function (component) {
+    if (_react2.default.isValidElement(component)) {
+      return component.ref != null &#x26;&#x26; component.ref === ref;
+    }
+
+    return false;
+  });
+
+  if (found.length !== 1) {
+    throw new Error(&#x27;Did not find exactly one match for ref: &#x27; + ref);
+  }
+
+  return found[0];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-shallow-testutils.find_with_type" id="apidoc.module.react-shallow-testutils.find_with_type">module react-shallow-testutils.find_with_type</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-shallow-testutils.find_with_type.default" id="apidoc.element.react-shallow-testutils.find_with_type.default">
+        function <span class="apidocSignatureSpan">react-shallow-testutils.find_with_type.</span>default
+        <span class="apidocSignatureSpan">(root, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findWithType(root, type) {
+  var found = (0, _findAllWithType2.default)(root, type);
+
+  if (found.length !== 1) {
+    throw new Error(&#x27;Did not find exactly one match for type: &#x27; + type);
+  }
+
+  return found[0];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-shallow-testutils.is_component_of_type" id="apidoc.module.react-shallow-testutils.is_component_of_type">module react-shallow-testutils.is_component_of_type</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-shallow-testutils.is_component_of_type.default" id="apidoc.element.react-shallow-testutils.is_component_of_type.default">
+        function <span class="apidocSignatureSpan">react-shallow-testutils.is_component_of_type.</span>default
+        <span class="apidocSignatureSpan">(element, componentType)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isComponentOfType(element, componentType) {
+  return element.type === componentType;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-shallow-testutils.is_dom_component" id="apidoc.module.react-shallow-testutils.is_dom_component">module react-shallow-testutils.is_dom_component</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-shallow-testutils.is_dom_component.default" id="apidoc.element.react-shallow-testutils.is_dom_component.default">
+        function <span class="apidocSignatureSpan">react-shallow-testutils.is_dom_component.</span>default
+        <span class="apidocSignatureSpan">(element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isDOMComponent(element) {
+  return typeof element.type === &#x27;string&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
